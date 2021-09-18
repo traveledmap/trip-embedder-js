@@ -6,15 +6,15 @@
    <h3 align="center">TraveledMap trip itineraries embedder</h3>
 
   <p align="center">
-    This repository contains the JavaScript library to easily display [TraveledMap](https://www.traveledmap.com) trip itineraries maps
+    This repository contains the JavaScript library to easily display <a href="https://www.traveledmap.com">TraveledMap</a> trip itineraries maps
 on a website, whatever the tool (WordPress, Prestashop, tailor made...) you're using. 🗺️ 📍
     <br />
     <br />
     <a href="http://demo.travel-itineraries.com/">View Demo</a>
     ·
-    <a href="/issues">Report Bug</a>
+    <a href="https://github.com/TraveledMap/trip-embedder-js/issues">Report Bug</a>
     ·
-    <a href="/issues">Request Feature</a>
+    <a href="https://github.com/TraveledMap/trip-embedder-js/issues">Request Feature</a>
   </p>
 </p>
 

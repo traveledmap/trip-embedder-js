@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta charset="utf-8"/>
+    <title>TraveledMap responsive trip example</title>
+</head>
+<body>
+    <h1>15 days RoadTrip in Canada</h1>
+    <div class="container">
+        <div class="content">
+            <div class="box" style="height: 200px"></div>
+
+            <div id="my-stretchable-map"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="montréal">Montreal</h2>
+            <div class="box" style="height: 400px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="québec-city">Québec</h2>
+            <div class="box" style="height: 300px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="chute-montmorency">Chute Montmorency</h2>
+            <div class="box" style="height: 320px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="kamouraska-sunset">Kamouraska Sunset</h2>
+            <div class="box" style="height: 300px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="parc-national-du-bic">Parc National du Bic</h2>
+            <div class="box" style="height: 400px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="canyon-des-portes-de-lenfer">Canyon des portes de l'enfer</h2>
+            <div class="box" style="height: 450px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="cloridorme">Cloridorme</h2>
+            <div class="box" style="height: 450px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="percé">Percé</h2>
+            <div class="box" style="height: 280px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="parc-national-du-forillon">Parc National du Forillon</h2>
+            <div class="box" style="height: 320px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="saguenay">Saguenay</h2>
+            <div class="box" style="height: 200px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="mont-tremblant">Mont tremblant</h2>
+            <div class="box" style="height: 350px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="montebello---parc-omega">Montebello - Parc Omega</h2>
+            <div class="box" style="height: 300px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="ottawa">Ottawa</h2>
+            <div class="box" style="height: 350px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="toronto">Toronto</h2>
+            <div class="box" style="height: 450px"></div>
+
+            <h2 class="traveledmap-trip-step" data-step="niagara-falls">Niagara falls</h2>
+            <div class="box" style="height: 500px"></div>
+        </div>
+        <div class="right-column">
+            <h3>Right column</h3>
+            <div class="box" style="height: 180px"></div>
+            <div class="box" style="height: 180px"></div>
+            <div id="my-extendable-map"></div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="../src/sticky.min.js"></script>
+    <script src="../dist/traveledmap-trip-lib.esm.js"></script>
+    <link rel="stylesheet" href="../dist/traveledmap-trip-lib.cjs.development.css"></link>
+    <script type="text/javascript">
+      const onLoad = function () {
+        new TraveledMapTrip('my-extendable-map', { // init the extendable map for larger screens only
+          userId: 'demo',
+          tripId: 'a48dee05-e242-4b2a-98bc-3ab3c8d6b621',
+          // userId: 'IrMVHt6nShNTyml3hrjb18WYukm2',
+          // tripId: 'a48dee05-e242-4b2a-98bc-3ab3c8d6b621',
+          isSticky: true,
+          isExtendable: true,
+          isStretchable: false,
+          mapHeight: '300px',
+          stickyMapHeight: '60%', // height of the map when it's sticky
+          shouldExtendToTop: true,
+          shouldExtendToRight: true,
+          shouldExtendToBottom: true,
+          marginTop: 10,
+          marginRight: 10,
+          marginBottom: 10,
+          shouldShowOnPhones: false,
+          shouldShowOnTablets: false,
+        });
+
+        new TraveledMapTrip('my-stretchable-map', { // init the stretchable map for phones and tablets
+          userId: 'demo',
+          tripId: 'a48dee05-e242-4b2a-98bc-3ab3c8d6b621',
+          // userId: 'IrMVHt6nShNTyml3hrjb18WYukm2',
+          // tripId: 'a48dee05-e242-4b2a-98bc-3ab3c8d6b621',
+          isSticky: true,
+          isExtendable: false,
+          isStretchable: true,
+          mapHeight: '400px', // standard height of the map, that will be overridden with stretchedMapHeight when stretched and stickyMapHeight when getting sticky
+          stretchedMapHeight: '70%',
+          stickyMapHeight: '300px', // height of the map when it's sticky
+          isOverContent: true,
+          shouldShowOnLargeScreens: false,
+        });
+      }
+
+      if (window.addEventListener) {
+        window.addEventListener("load", onLoad, false);
+      } else if (window.attachEvent) { // IE DOM
+        window.attachEvent("onload", onLoad);
+      } else {
+        onLoad();
+      }
+    </script>
+
+    <style>
+        body {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #595959;
+            line-height: 1.5;
+            text-align: left;
+            background-color: rgba(0, 0, 0, .03);
+            margin: 0;
+
+            scroll-behavior: smooth;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+        }
+        @media (max-width: 992px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        .content {
+            flex: 1;
+        }
+        .right-column {
+            width: 300px;
+            margin-left: 20px;
+        }
+        .right-column > h3 {
+            display: none;
+        }
+        @media (max-width: 992px) {
+            .right-column {
+                width: 100%;
+                margin-left: 0;
+            }
+            .right-column > h3 {
+                display: block;
+            }
+        }
+
+        .box {
+            background-color: #e5e5e5;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .right-column .box {
+            background-color: #cecece;
+        }
+
+        @media (min-width: 576px) {
+            .container {
+                max-width: 540px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+    </style>
+</footer>
