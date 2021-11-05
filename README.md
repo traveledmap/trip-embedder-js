@@ -10,7 +10,7 @@
 on a website, whatever the tool (WordPress, Prestashop, tailor made...) you're using. 🗺️ 📍
     <br />
     <br />
-    <a href="http://demo.travel-itineraries.com/">View Demo</a>
+    <a href="https://demo.itineraries.traveledmap.com/">View Demos</a>
     ·
     <a href="https://github.com/TraveledMap/trip-embedder-js/issues">Report Bug</a>
     ·
@@ -19,6 +19,7 @@ on a website, whatever the tool (WordPress, Prestashop, tailor made...) you're u
 </p>
 
 **Before getting started**:
+ - There are multiple **[demos](https://demo.itineraries.traveledmap.com/)** available: https://demo.itineraries.traveledmap.com/
  - Please remember to have a look at the [examples](#examples) and the [FAQ](#faq)
 if you need help
  - Using the trip itinerary tool of TraveledMap requires a subscription, [learn more](https://www.traveledmap.com/pricing?tab=2)
