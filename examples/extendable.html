@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Demo: 14 jours dans l'Ouest Américain</h1>
-<div class="container">
+<div class="container" data-sticky-container>
     <div class="content">
         <div class="box">
             <p>
@@ -217,6 +217,14 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="footer">
+        <h2>Page bottom</h2>
+        <p>This page bottom contains some content and the map will at this point</p>
+        <div class="box" style="height: 2500px"></div>
+    </div>
+</div>
+
 
 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250" fill="#151513"
      class="view-source">
@@ -299,6 +307,10 @@
             margin-left: 20px;
         }
 
+        .footer {
+            flex: 1;
+            width: 100%;
+        }
         .box {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -307,6 +319,9 @@
         }
 
         .right-column .box {
+            background-color: #cecece;
+        }
+        .footer .box {
             background-color: #cecece;
         }
 
