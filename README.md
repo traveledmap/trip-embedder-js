@@ -48,7 +48,7 @@ Optionally, you can add tags with class `traveledmap-trip-step` and `data-step` 
 2. Then include the library files to load the Javascript and CSS:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/traveledmap/trip-embedder-js@latest/dist/traveledmap-trip.min.js" />
-<script src="https://cdn.jsdelivr.net/gh/traveledmap/trip-embedder-js@latest/dist/traveledmap-trip.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/traveledmap/trip-embedder-js@latest/dist/traveledmap-trip.min.css" />
 ```
 
 3. Finally, instantiate the trip so that the map can display. Don't forget to use your custom id and to check the
