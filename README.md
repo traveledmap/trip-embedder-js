@@ -56,7 +56,7 @@ Optionally, you can add tags with class `traveledmap-trip-step` and `data-step` 
 ```html
 <script>
     const onLoad = function() {
-        new TraveledMapTrip('traveledmap-trip-map', config);
+        const trip = new TraveledMapTrip('traveledmap-trip-map', config);
     }
     
     if (window.addEventListener) {
@@ -108,6 +108,59 @@ All the following properties are accepted in the configuration.
 | shouldShowRoadDurationOrDistance            | No | false                       | Allows to show the roads durations, or distances. **Application only if your TraveledMap configuration allows it.** Contact us at contact@traveledmap.com                                                                                                                                                                                   |
 | shouldShowOnlyFocusedRoadDurationOrDistance | No | false                       | Allows to show the roads durations, or distances, only for the roads adjacent to the focused marker. **Application only if your TraveledMap configuration allows it.**                                                                                                                                                                      |
 | baseUrl                                     | No | https://www.traveledmap.com | Only for white-labeled websites, to target their TraveledMap's url.                                                                                                                                                                                                                                                                         |
+
+## Destroying
+
+You can also keep the instance and call `destroy()` when your framework unmounts the component or when you want to fully clean the widget and its listeners.
+
+```html
+<script>
+    let trip = null;
+
+    const onLoad = function() {
+        trip = new TraveledMapTrip('traveledmap-trip-map', config);
+    }
+
+    const onUnload = function() {
+        if (trip) {
+            trip.destroy();
+            trip = null;
+        }
+    }
+
+    window.addEventListener("load", onLoad);
+    window.addEventListener("beforeunload", onUnload);
+</script>
+```
+
+Example in React:
+
+```tsx
+import { useEffect, useRef } from 'react';
+
+declare global {
+  interface Window {
+    TraveledMapTrip: new (targetId: string, config: any) => {
+      destroy: () => void;
+    };
+  }
+}
+
+export function TripMap({ config }: { config: any }) {
+  const tripRef = useRef<{ destroy: () => void } | null>(null);
+
+  useEffect(() => {
+    tripRef.current = new window.TraveledMapTrip('traveledmap-trip-map', config);
+
+    return () => {
+      tripRef.current?.destroy();
+      tripRef.current = null;
+    };
+  }, [config]);
+
+  return <div id="traveledmap-trip-map" />;
+}
+```
 
 ## Examples
 The example folder contains 4 HTML files that you can open with your browser:
