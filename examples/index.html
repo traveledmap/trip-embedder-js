@@ -95,10 +95,10 @@
         body {
             font-size: 1rem;
             font-weight: 400;
-            color: #595959;
+            color: #5b6472;
             line-height: 1.5;
             text-align: left;
-            background-color: rgba(0, 0, 0, .03);
+            background: linear-gradient(180deg, #fbfaf7 0%, #f4efe8 100%);
             margin: 0;
             font-family: 'Montserrat', sans-serif;
             scroll-behavior: smooth;
@@ -108,9 +108,11 @@
             text-align: center;
             margin-bottom: 0;
             margin-top: 40px;
+            color: #162033;
         }
 
         .logo {
+            display: block;
             margin-left: auto;
             margin-right: auto;
             margin-top: 20px;
@@ -118,10 +120,11 @@
 
         hr {
             height: 1px;
-            background-color: black;
+            background-color: #d7dce5;
             width: 100px;
             margin-top: 20px;
             margin-bottom: 20px;
+            border: 0;
         }
 
         .container {
@@ -133,6 +136,7 @@
             margin-left: auto;
             width: 100%;
             margin-bottom: 40px;
+            box-sizing: border-box;
         }
 
         .grid {
@@ -152,11 +156,12 @@
             flex-direction: column;
             min-width: 0;
             word-wrap: break-word;
-            background-color: #f9f9f9;
+            background-color: rgba(255, 255, 255, 0.92);
             background-clip: border-box;
-            border-radius: .25rem;
+            border-radius: 22px;
             overflow: hidden;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+            border: 1px solid rgba(207, 216, 228, 0.9);
+            box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
         }
 
         .card .card-img {
@@ -164,7 +169,7 @@
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
-            border-bottom: 1px solid #e3e3e3;
+            border-bottom: 1px solid #e8ecf2;
         }
 
         .card .card-body {
@@ -177,6 +182,7 @@
         .card .card-body h2 {
             margin-top: 0;
             margin-bottom: 10px;
+            color: #162033;
         }
         .card .card-actions {
             display: flex;
@@ -224,10 +230,10 @@
             width: 130px;
             height: 40px;
             padding: 10px 25px;
-            border: 2px solid #000;
+            border: 1px solid #d5dbe6;
             font-family: 'Lato', sans-serif;
             font-weight: 500;
-            background: transparent;
+            background: rgba(255, 255, 255, 0.94);
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
@@ -237,11 +243,14 @@
             text-decoration: none;
             font-size: 0.8rem;
             text-align: center;
+            border-radius: 999px;
+            color: #162033;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
         }
 
         /* 6 */
         .btn-6 {
-            background: #000;
+            background: #162033;
             color: #fff;
             line-height: 42px;
             padding: 0;
@@ -261,7 +270,7 @@
             content: "";
             height: 0%;
             width: 2px;
-            background: #000;
+            background: #162033;
         }
 
         .btn-6:before {
@@ -277,8 +286,8 @@
         }
 
         .btn-6:hover {
-            color: #000;
-            background: transparent;
+            color: #162033;
+            background: #ffffff;
         }
 
         .btn-6:hover:before {
@@ -295,7 +304,7 @@
         .btn-6 span:after {
             position: absolute;
             content: "";
-            background: #000;
+            background: #162033;
         }
 
         .btn-6 span:before {
@@ -326,11 +335,11 @@
         .btn-3 {
             line-height: 39px;
             padding: 0;
-            color: black;
+            color: #162033;
         }
         .btn-3:hover{
-            background: transparent;
-            color: #000;
+            background: #ffffff;
+            color: #162033;
         }
         .btn-3 span {
             position: relative;
@@ -344,7 +353,7 @@
             content: "";
             left: 0;
             top: 0;
-            background: #000;
+            background: #162033;
             transition: all 0.3s ease;
         }
         .btn-3:before {
@@ -367,7 +376,7 @@
             content: "";
             right: 0;
             bottom: 0;
-            background: #000;
+            background: #162033;
             transition: all 0.3s ease;
         }
         .btn-3 span:before {
@@ -383,6 +392,11 @@
         }
         .btn-3 span:hover:after {
             width: 100%;
+        }
+
+        .custom-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
         }
     </style>
 </footer>

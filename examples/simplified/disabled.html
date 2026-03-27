@@ -215,7 +215,6 @@
         </div>
     </div>
 
-
     <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 250 250" fill="#151513"
          class="view-source">
         <a title="View Source"
@@ -236,6 +235,7 @@
           userId: '8LLGnB1Tt3PKmoGHCNEDsBWxOUN2',
           tripId: '5a350f7c-8a74-4142-8865-652ef0773992',
           mapHeight: '50VH',
+          mapContainerStyle: 'border-radius: 24px; overflow: hidden;',
           isDisabled: true,
         })
       }
@@ -253,26 +253,34 @@
         body {
             font-size: 1rem;
             font-weight: 400;
-            color: #595959;
+            color: #556070;
             line-height: 1.5;
             text-align: left;
-            background-color: rgba(0, 0, 0, .03);
+            background: linear-gradient(180deg, #fbfaf7 0%, #f3efe9 100%);
             margin: 0;
 
             scroll-behavior: smooth;
         }
         h1 {
             text-align: center;
+            color: #162033;
+            margin-top: 32px;
+            margin-bottom: 28px;
+        }
+
+        h2 {
+            color: #162033;
         }
 
         .container {
             display: flex;
             flex-direction: row;
-            padding-right: 15px;
-            padding-left: 15px;
+            padding-right: 20px;
+            padding-left: 20px;
             margin-right: auto;
             margin-left: auto;
             width: 100%;
+            box-sizing: border-box;
         }
 
         .content {
@@ -281,9 +289,15 @@
         .box {
             width: 100%;
             margin-bottom: 20px;
+            padding: 18px 20px;
+            background-color: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(207, 216, 228, 0.9);
+            border-radius: 18px;
+            box-sizing: border-box;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
         }
         .right-column .box {
-            background-color: #cecece;
+            background-color: rgba(226, 232, 240, 0.9);
         }
 
         @media (min-width: 576px) {
@@ -308,6 +322,7 @@
             position: absolute;
             top: 0;
             right: 0;
+            fill: #162033;
         }
     </style>
 </footer>
